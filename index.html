@@ -1,0 +1,140 @@
+<!DOCTYPE HTML-->
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-2.2.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+
+<style type="text/css">
+    #encavezado{
+        text-align: center;
+        font-size: 14px;
+        color: red;
+        font-weight:  bold;
+    }
+    #piegagina{
+        text-align: center;
+        font-size: 8px;
+        color:chartreuse;
+        font-weight:lighter;
+    }
+</style>
+
+<script type="text/javascript">
+                $("document").ready(function inicio(){
+                    //SUMA 
+                    $("#btnSumar").tap(function(){
+                        var num= parseInt($("#txtNum1").val());
+                        var num2=parseInt($("#txtNum2").val());
+                        $("#txtRes").val(num + num2); 
+                    });
+                    //RESTA
+                    $("#btnRestar").tap(function(){
+                        var num3= parseInt($("#txtNum3").val());
+                        var num4=parseInt($("#txtNum4").val());
+                        $("#txtResu").val(num3 - num4); 
+                    });
+                    //MULTIPLICACION 
+                    $("#btnMulti").tap(function(){
+                        var num5= parseInt($("#txtNum5").val());
+                        var num6=parseInt($("#txtNum6").val());
+                        $("#txtResul").val(num5 * num6); 
+                    });
+                    //DIVISION
+                    $("#btnDivi").tap(function(){
+                        var num7= parseInt($("#txtNum7").val());
+                        var num8=parseInt($("#txtNum8").val());
+                        $("#txtResult").val(num7 / num8); 
+                    });
+                });
+            </script>
+</head>
+<body>
+<div data-role="page" id="principal">
+        <div data-role="header">
+            <h1>ITSL </h1>
+        </div>
+        <div data-role="content">
+            <p> pulsar boton que desee </p>
+            <a href="#segunda" data-role="button" data-transition="slideup">SUMA</a>
+            <a href="#tercera" data-role="button" data-transition="slidedown">RESTA</a> 
+            <a href="#cuarta" data-role="button" data-transition="top">MULTIPLICACIÓN</a> 
+            <a href="#quinta" data-role="button" data-transition="slidedown">DIVISIÓN</a>
+        </div>    
+</div>
+    
+<div data-role="page" id="segunda">
+        <div data-role="header">
+            <h1>SUMA</h1>
+        </div>
+    
+        <div data-role="content">
+            <input type="text" value=" " placeholder="Número 1 " id="txtNum1"/>
+            <input type="text" value=" " placeholder="Número 2 " id="txtNum2"/>
+            <input type="text" value=" " placeholder="Resultado " id="txtRes"/>
+            <input type="button" value="Sumar" id="btnSumar"/>
+            
+            <a href="#principal" data-role="button" data-transition="flip">Página de Inicio</a>
+        </div>
+        <div data-role="footer">
+           <p> pie de pagina</p>
+        </div>
+</div>
+    
+<div data-role="page" id="tercera">
+        <div data-role="header">
+            <h1>RESTA</h1>
+        </div>
+        <div data-role="content">
+            <input type="text" value=" " placeholder="Número 1 " id="txtNum3"/>
+            <input type="text" value=" " placeholder="Número 2 " id="txtNum4"/>
+            <input type="text" value=" " placeholder="Resultado " id="txtResu"/>
+            <input type="button" value="Restar" id="btnRestar"/>
+            
+            <a href="#principal" data-role="button" data-transition="flip">Página de Inicio</a>
+        </div>
+        <div data-role="footer">
+           <p> pie de pagina</p>
+        </div>
+</div>
+    
+<div data-role="page" id="cuarta">
+        <div data-role="header">
+            <h1>MULTIPLICACIÓN</h1>
+        </div>
+    
+    <div data-role="content">
+         <input type="text" value=" " placeholder="Número 1 " id="txtNum5"/>
+            <input type="text" value=" " placeholder="Número 2 " id="txtNum6"/>
+            <input type="text" value=" " placeholder="Resultado " id="txtResul"/>
+            <input type="button" value="Multiplicar" id="btnMulti"/>
+            
+        <a href="#principal" data-role="button" data-transition="flip">Página de Inicio</a>
+        </div>
+         <div data-role="footer">
+           <p> pie de pagina</p>
+        </div>
+  </div>  
+    
+<div data-role="page" id="quinta">
+        <div data-role="header">
+            <h1>DIVISIÓN</h1>
+        </div>
+    
+        <div data-role="content">
+            <input type="text" value=" " placeholder="Número 1 " id="txtNum8"/>
+            <input type="text" value=" " placeholder="Número 2 " id="txtNum9"/>
+            <input type="text" value=" " placeholder="Resultado " id="txtResult"/>
+            <input type="button" value="Dividir" id="btnDivi"/>
+            
+            <a href="#principal" data-role="button" data-transition="flip">Página de Inicio</a>
+        </div>
+        <div data-role="footer">
+           <p> pie de pagina</p>
+        </div>
+</div>
+    
+</body>
+</html>
